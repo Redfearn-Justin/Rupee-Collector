@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--Meta Viewport tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+         Unit 4 Assignment
+    </title>
+
+    <!--Javascript link-->
+    <script src="assets/javascript/game.js"></script>
+    <!--jQuery link CONSIDER DELETING (MIGHT NOT BE NECESSARY)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--CSS Reset link-->
+    <link href="assets/css/reset.css" rel="stylesheet">
+    <!--CSS link-->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <h1>Crystal Collector Game</h1>
+    </header>
+
+    <div id="instructions">
+        <h2>Instructions</h2>
+        <hr>
+        
+        <p>
+            OBJECTIVE: Clicking ("collecting") the crystals below, exactly match the randomly generated number below in order to win! Accumulate too many crystals - go over the amount shown, and you lose!
+        </p>
+        <p>
+            Each Crystal is randomly assigned a number 1 to 12. Therefore, tread carefully, and use your wits to truimph over the odds!
+        </p>
+        <p>
+            Win or lose, ALL game settings will RESET, including each crystal's randomly assigned number. Yes, I went there.
+        </p>
+    </div>
+
+    <div id="houseNumber"></div>
+
+    <div id="scoreDiv">
+        <div>
+            Wins:
+            <div id="winsDiv"></div>
+        </div>
+        <div>
+            Lose:
+            <div id="loseDiv"></div>
+        </div>
+    </div>
+
+    <div id="buttonContainer">
+        <button class="userButton" id="redButton">
+        </button>
+
+        <button class="userButton" id="blueButton">
+        </button>
+
+        <button class="userButton" id="yellowButton">
+        </button>
+
+        <button class="userButton" id="greenButton">
+        </button>
+    </div>
+
+    <div>
+        Total Score:
+        <div id="totalScoreDiv"></div>
+    </div>
+
+
+
+
+
+</body>
+</html>
