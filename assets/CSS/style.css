@@ -11,10 +11,11 @@ p {
 
 .content {
     background-color: palegoldenrod;
-    box-shadow: 50px aquamarine;
     margin-top: 4%;
     margin-bottom: 4%;
     padding: 1%;
+    width: inherit;
+    box-shadow: 7px 7px 5px black;
 }
 
 .userButton {
@@ -30,8 +31,8 @@ p {
 header {
     font-family: 'Courgette', cursive, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 400;
-    color: yellowgreen;
-    text-shadow: 2px 2px 4px #000000;
+    color: rgba(221, 161, 48, 0.863);
+    text-shadow: 3px 3px 4px #000000;
     margin-top: 2%;
 
 }
