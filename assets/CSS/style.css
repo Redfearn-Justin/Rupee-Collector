@@ -1,0 +1,47 @@
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+p {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.content {
+    background-color: palegoldenrod;
+    box-shadow: 50px aquamarine;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    padding: 1%;
+}
+
+.userButton {
+    width: 10%;
+}
+
+.rupeePic {
+    width: 25%;
+    padding:5%;
+    height: 50px;
+}
+
+header {
+    font-family: 'Courgette', cursive, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 400;
+    color: yellowgreen;
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: 2%;
+
+}
+
+body {
+    margin-left: 3%;
+    margin-right: 3%;
+    background-image: url("../images/Zmap.jpg");
+    background-size: auto;
+    overflow: scroll;
+    text-align: center;
+    font-family: 'Dosis', sans-serif,'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

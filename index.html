@@ -11,12 +11,18 @@
 
     <!--Javascript link-->
     <script src="assets/javascript/game.js"></script>
+
     <!--jQuery link CONSIDER DELETING (MIGHT NOT BE NECESSARY)-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <!--CSS Reset link-->
     <link href="assets/css/reset.css" rel="stylesheet">
+
     <!--CSS link-->
     <link href="assets/css/style.css" rel="stylesheet">
+
+    <!--Google Fonts Link-->
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Dosis:500" rel="stylesheet">
 
 </head>
 <body>
@@ -25,7 +31,7 @@
         <h1>Crystal Collector Game</h1>
     </header>
 
-    <div id="instructions">
+    <div class="content" id="instructions">
         <h2>Instructions</h2>
         <hr>
         
@@ -40,9 +46,9 @@
         </p>
     </div>
 
-    <div id="houseNumber"></div>
+    <div class="content" id="houseNumber"></div>
 
-    <div id="scoreDiv">
+    <div class="content" id="scoreDiv">
         <div>
             Wins:
             <div id="winsDiv"></div>
@@ -53,21 +59,19 @@
         </div>
     </div>
 
-    <div id="buttonContainer">
-        <button class="userButton" id="redButton">
-        </button>
+    <button class="userButton" id="redButton"><img src="assets/images/RedRupee.png" class="rupeePic">
+    </button>
 
-        <button class="userButton" id="blueButton">
-        </button>
+    <button class="userButton" id="purpleButton"><img src="assets/images/PurpleRupee.png" class="rupeePic">
+    </button>
 
-        <button class="userButton" id="yellowButton">
-        </button>
+    <button class="userButton" id="yellowButton"><img src="assets/images/YellowRupee.png" class="rupeePic">
+    </button>
 
-        <button class="userButton" id="greenButton">
-        </button>
-    </div>
+    <button class="userButton" id="greenButton"><img src="assets/images/GreenRupee.png" class="rupeePic">
+    </button>
 
-    <div>
+    <div class="content">
         Total Score:
         <div id="totalScoreDiv"></div>
     </div>
