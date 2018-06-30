@@ -1,3 +1,20 @@
+#greenButton {
+    box-shadow: 3px 4px 3px green;
+}
+
+#yellowButton {
+    box-shadow: 1px 4px 3px yellow;
+}
+
+#purpleButton {
+    box-shadow: 1px 4px 3px purple;
+}
+
+#redButton {
+    box-shadow: 1px 4px 3px red;
+}
+
+
 hr {
     border: 0;
     height: 1px;
@@ -31,7 +48,7 @@ p {
 header {
     font-family: 'Courgette', cursive, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 400;
-    color: rgba(221, 161, 48, 0.863);
+    color: rgba(211, 231, 31, 0.973);
     text-shadow: 3px 3px 4px #000000;
     margin-top: 2%;
 
