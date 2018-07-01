@@ -50,35 +50,57 @@ $(document).ready(function() {
 
     //functions
 
-    // function addRedScore () {
-    //     totalScore = totalScore + redButtonVal;
-    //     $("#totalScoreDiv").text(totalScore);
-    // }
-
-    // function addPurpleScore() {
-    //     totalScore = totalScore + purpleButtonVal;
-    //     $("#totalScoreDiv").text(totalScore);
-    // }
-
-    // function addYellowScore() {
-    //     totalScore = totalScore + yellowButtonVal;
-    //     $("#totalScoreDiv").text(totalScore);
-    // }
-
-    // function addGreenScore() {
-    //     totalScore = totalScore + greenButtonVal;
-    //     $("#totalScoreDiv").text(totalScore);
-    // }
-
     //set button click events
 
-    $(".userButton").on("click", function() {
+    $("#redButton").on("click", function() {
 
-        if (redButtonVal) {
+        totalScore = totalScore + redButtonVal;
 
-        }
-        //adding button value to the appropriate score holder div
+        console.log("Current score: " + totalScore);
+
+        $("#totalScoreDiv").text(totalScore);
+
+        $("#rupeeSound")[0].play();
+
     });
+
+    $("#purpleButton").on("click", function() {
+
+        totalScore = totalScore + purpleButtonVal;
+
+        console.log("Current score: " + totalScore);
+
+        $("#totalScoreDiv").text(totalScore);
+
+        $("#rupeeSound")[0].play();
+
+    });
+
+    $("#yellowButton").on("click", function() {
+
+        totalScore = totalScore + yellowButtonVal;
+
+        console.log("Current score: " + totalScore);
+
+        $("#totalScoreDiv").text(totalScore);
+
+        $("#rupeeSound")[0].play();
+
+    });
+
+    $("#greenButton").on("click", function() {
+
+        totalScore = totalScore + greenButtonVal;
+
+        console.log("Current score: " + totalScore);
+
+        $("#totalScoreDiv").text(totalScore);
+
+        $("#rupeeSound")[0].play();
+
+    });
+    
+    
 
 
 
