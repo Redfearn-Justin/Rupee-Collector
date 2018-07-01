@@ -1,19 +1,10 @@
 $(document).ready(function() {
 
-    //set W/L variables
+    //set W/L variables, and other variables
 
     var Wins = 0;
     var Lose = 0;
     var totalScore = 0;
-
-    //matching above variables to appropriate Divs
-
-    $("#winsDiv").text(Wins);
-    $("#loseDiv").text(Lose);
-    $("#totalScoreDiv").text(totalScore);
-
-    //gamble on "refresh" functionality
-    var refreshGame = false;
 
     var computerPick = Math.floor(Math.random() * 120) + 19;
     var crystalPick = [
@@ -50,6 +41,75 @@ $(document).ready(function() {
 
     //functions
 
+    function resetGame() {
+
+        //reset totalScore and refresh amount
+
+        totalScore = 0;
+
+        $("#totalScoreDiv").text(totalScore);
+
+        //reset "Crystal to Collect" amount and refresh amont
+    
+        computerPick = Math.floor(Math.random() * 120) + 19;
+
+        $("#houseNumber").text(computerPick);
+
+        //have numbers to the crystals reassigned
+        
+        crystalPick = [
+            Math.floor(Math.random() * 12) + 1,
+            Math.floor(Math.random() * 12) + 1,
+            Math.floor(Math.random() * 12) + 1,
+            Math.floor(Math.random() * 12) + 1
+        ];
+
+        $("#redButton").val(this[0]);
+        $("#purpleButton").val(this[1]);
+        $("#yellowButton").val(this[2]);
+        $("#greenButton").val(this[3]);
+
+        //console log verifying the game has restarted and the new values
+
+        console.log("game has reset");
+
+        console.log("Red crystal value: " + crystalPick[0]);
+        console.log("Purple crystal value: " + crystalPick[1]);
+        console.log("Yellow crystal value: " + crystalPick[2]);
+        console.log("Green crystal value: " + crystalPick[3]);
+
+    }
+
+    function endGame () {
+
+        if(totalScore === computerPick) {
+
+            Wins++;
+
+            $("#winsDiv").text(Wins);
+
+            console.log("Victory Achieved");
+
+            $("#victorySound")[0].play();
+
+            resetGame();
+
+        }
+
+        else if(totalScore > computerPick) {
+
+            Lose++;
+
+            $("#loseDiv").text(Lose);
+
+            console.log("Failure Achieved");
+
+            $("#loseSound")[0].play();
+
+            resetGame();
+        }
+    }
+
     //set button click events
 
     $("#redButton").on("click", function() {
@@ -62,6 +122,7 @@ $(document).ready(function() {
 
         $("#rupeeSound")[0].play();
 
+        endGame();
     });
 
     $("#purpleButton").on("click", function() {
@@ -74,6 +135,7 @@ $(document).ready(function() {
 
         $("#rupeeSound")[0].play();
 
+        endGame();
     });
 
     $("#yellowButton").on("click", function() {
@@ -86,6 +148,7 @@ $(document).ready(function() {
 
         $("#rupeeSound")[0].play();
 
+        endGame();
     });
 
     $("#greenButton").on("click", function() {
@@ -98,13 +161,9 @@ $(document).ready(function() {
 
         $("#rupeeSound")[0].play();
 
+        endGame();
     });
     
     
-
-
-
-
-
 
 });
