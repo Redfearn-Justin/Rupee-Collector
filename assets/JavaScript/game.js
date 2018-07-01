@@ -15,13 +15,6 @@ $(document).ready(function() {
         Math.floor(Math.random() * 12) + 1
     ];
 
-    //Crystal value variables
-
-    var redButtonVal = crystalPick[0];
-    var purpleButtonVal = crystalPick[1];
-    var yellowButtonVal = crystalPick[2];
-    var greenButtonVal = crystalPick[3];
-
     //set every crystal to have a different random number assigned -- Console Log results
 
     $("#redButton").val(crystalPick[0]);
@@ -121,7 +114,7 @@ $(document).ready(function() {
 
     $("#redButton").on("click", function() {
 
-        totalScore = totalScore + redButtonVal;
+        totalScore = totalScore + parseInt($(this).val())
 
         console.log("Current score: " + totalScore);
 
@@ -141,7 +134,7 @@ $(document).ready(function() {
 
     $("#purpleButton").on("click", function() {
 
-        totalScore = totalScore + purpleButtonVal;
+        totalScore = totalScore + parseInt($(this).val())
 
         console.log("Current score: " + totalScore);
 
@@ -161,7 +154,7 @@ $(document).ready(function() {
 
     $("#yellowButton").on("click", function() {
 
-        totalScore = totalScore + yellowButtonVal;
+        totalScore = totalScore + parseInt($(this).val())
 
         console.log("Current score: " + totalScore);
 
@@ -181,7 +174,7 @@ $(document).ready(function() {
 
     $("#greenButton").on("click", function() {
 
-        totalScore = totalScore + greenButtonVal;
+        totalScore = totalScore + parseInt($(this).val())
 
         console.log("Current score: " + totalScore);
 

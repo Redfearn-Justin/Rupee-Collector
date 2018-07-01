@@ -1,24 +1,25 @@
-/* #scoreDiv {
-    float: left;
+#vlconfirm {
+    font-weight: bold;
+    padding-bottom: 1%;
 }
 
-#houseNumber {
-    float: left;
-} */
-
 #greenButton {
+    margin-left: 1%;
     box-shadow: 3px 4px 3px green;
 }
 
 #yellowButton {
+    margin-left: 1%;
     box-shadow: 1px 4px 3px yellow;
 }
 
 #purpleButton {
+    margin-left: 1%;
     box-shadow: 1px 4px 3px purple;
 }
 
 #redButton {
+    margin-left: 1%;
     box-shadow: 1px 4px 3px red;
 }
 
@@ -36,8 +37,8 @@ p {
 
 .content {
     background-color: palegoldenrod;
-    margin-top: 4%;
-    margin-bottom: 4%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     padding: 1%;
     width: inherit;
     box-shadow: 7px 7px 5px black;
