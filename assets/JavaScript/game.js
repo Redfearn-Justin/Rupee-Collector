@@ -5,6 +5,7 @@ $(document).ready(function() {
     var Wins = 0;
     var Lose = 0;
     var totalScore = 0;
+    var gameRefresh = false;
 
     var computerPick = Math.floor(Math.random() * 120) + 19;
     var crystalPick = [
@@ -64,10 +65,10 @@ $(document).ready(function() {
             Math.floor(Math.random() * 12) + 1
         ];
 
-        $("#redButton").val(this[0]);
-        $("#purpleButton").val(this[1]);
-        $("#yellowButton").val(this[2]);
-        $("#greenButton").val(this[3]);
+        $("#redButton").val(crystalPick[0]);
+        $("#purpleButton").val(crystalPick[1]);
+        $("#yellowButton").val(crystalPick[2]);
+        $("#greenButton").val(crystalPick[3]);
 
         //console log verifying the game has restarted and the new values
 
@@ -78,11 +79,15 @@ $(document).ready(function() {
         console.log("Yellow crystal value: " + crystalPick[2]);
         console.log("Green crystal value: " + crystalPick[3]);
 
+        gameRefresh = true;
+
     }
 
     function endGame () {
 
         if(totalScore === computerPick) {
+
+            $("#vlconfirm").text("You Win!");
 
             Wins++;
 
@@ -97,6 +102,8 @@ $(document).ready(function() {
         }
 
         else if(totalScore > computerPick) {
+
+            $("#vlconfirm").text("You Lose!");
 
             Lose++;
 
@@ -122,6 +129,13 @@ $(document).ready(function() {
 
         $("#rupeeSound")[0].play();
 
+        if(gameRefresh) {
+
+            //reset v/l banner
+
+            $("#vlconfirm").text("");
+        }
+
         endGame();
     });
 
@@ -134,6 +148,13 @@ $(document).ready(function() {
         $("#totalScoreDiv").text(totalScore);
 
         $("#rupeeSound")[0].play();
+
+        if(gameRefresh) {
+            
+            //reset v/l banner
+
+            $("#vlconfirm").text("");
+        }
 
         endGame();
     });
@@ -148,6 +169,13 @@ $(document).ready(function() {
 
         $("#rupeeSound")[0].play();
 
+        if(gameRefresh) {
+            
+            //reset v/l banner
+
+            $("#vlconfirm").text("");
+        }
+
         endGame();
     });
 
@@ -160,6 +188,13 @@ $(document).ready(function() {
         $("#totalScoreDiv").text(totalScore);
 
         $("#rupeeSound")[0].play();
+
+        if(gameRefresh) {
+            
+            //reset v/l banner
+
+            $("#vlconfirm").text("");
+        }
 
         endGame();
     });
